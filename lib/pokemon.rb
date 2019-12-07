@@ -7,6 +7,7 @@ class Pokemon
     @type = type
     @db = db
   end
+<<<<<<< HEAD
 
   def self.save(name, type, db)
     db.execute("INSERT INTO pokemon(name, type) VALUES(?, ? )", name, type)
@@ -16,4 +17,6 @@ class Pokemon
     pokemon_found = db.execute("SELECT * FROM pokemon WHERE id = ?", id).flatten
     Pokemon.new(id: pokemon_found[0], name: pokemon_found[1], type: pokemon_found[2])
   end
+=======
+>>>>>>> 468f3a4fcbf7a237ea1b8ea1afcd8f3f499c9712
 end
